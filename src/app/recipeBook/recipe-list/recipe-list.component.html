@@ -1,1 +1,30 @@
-<app-recipe-item></app-recipe-item>
+<div class="col-span-12">
+  <button class="p-2 bg-blue-500 rounded-xl hover:bg-blue-400">
+    New Recipe
+  </button>
+</div>
+<hr class="my-4" />
+<div class="col-span-12">
+  <ul class="my-2 flex flex-col gap-2">
+    <li *ngFor="let recipe of recipes" class="gap-4">
+      <a
+        href="#"
+        class="flex p-4 border rounded-sm border-gray-200 group justify-between"
+      >
+        <div>
+          <h3 class="text-2xl font-bold group-hover:text-gray-600">
+            {{ recipe.name }}
+          </h3>
+          <p class="text-gray-800">{{ recipe.description }}</p>
+        </div>
+        <img
+          [src]="recipe.imagePath"
+          alt="{{ recipe.name }} photograph"
+          style="max-height: 50px"
+        />
+      </a>
+    </li>
+  </ul>
+
+  <app-recipe-item></app-recipe-item>
+</div>
