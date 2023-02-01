@@ -1,1 +1,31 @@
-<p>shopping-list-edit works!</p>
+<form action="" class="grid gap-4 w-1/2">
+  <div class="grid grid-cols-2 gap-2">
+    <label for="name" class="font-bold">Name</label>
+    <label for="amount" class="font-bold">Amount</label>
+    <input
+      type="text"
+      name="name"
+      class="border border-gray-300 rounded-md text-center"
+    />
+    <input
+      type="number"
+      name="amount"
+      class="border border-gray-300 rounded-md text-center"
+    />
+  </div>
+  <div class="gap-2 flex">
+    <button
+      class="px-4 py-2 bg-green-700 rounded-md text-white hover:bg-green-600"
+    >
+      Add
+    </button>
+    <button class="px-4 py-2 bg-red-700 rounded-md text-white hover:bg-red-600">
+      Delete
+    </button>
+    <button
+      class="px-4 py-2 bg-blue-700 rounded-md text-white hover:bg-blue-600"
+    >
+      Clear
+    </button>
+  </div>
+</form>
