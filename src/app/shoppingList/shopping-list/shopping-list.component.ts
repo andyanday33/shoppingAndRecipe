@@ -6,5 +6,8 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
   templateUrl: './shopping-list.component.html',
 })
 export class ShoppingListComponent {
-  ingredients: Ingredient[] = [];
+  ingredients: Ingredient[] = [
+    new Ingredient('Apple', '5'),
+    new Ingredient('Banana', '10'),
+  ];
 }

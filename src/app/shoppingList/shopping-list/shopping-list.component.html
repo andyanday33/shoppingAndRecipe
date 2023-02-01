@@ -2,8 +2,10 @@
   <div class="col-span-10 grid gap-4">
     <app-shopping-list-edit></app-shopping-list-edit>
     <hr />
-    <ul>
-      <li><a href="#"></a></li>
+    <ul class="flex flex-col border border-gray-300 divide-y-2">
+      <li class="p-4" *ngFor="let ingredient of ingredients">
+        <a href="#"> {{ ingredient.name }} ({{ ingredient.amount }}) </a>
+      </li>
     </ul>
   </div>
 </div>
