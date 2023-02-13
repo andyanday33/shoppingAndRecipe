@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -18,4 +18,14 @@ export class RecipeListComponent {
       'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/Shakshuka-19.jpg'
     ),
   ];
+
+  @Output() selection: EventEmitter<Recipe>;
+
+  constructor() {
+    this.selection = new EventEmitter<Recipe>();
+  }
+
+  onSelected(recipe: Recipe) {
+    this.selection.emit(recipe);
+  }
 }

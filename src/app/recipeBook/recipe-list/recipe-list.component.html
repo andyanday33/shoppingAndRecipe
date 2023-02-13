@@ -7,7 +7,10 @@
 <div class="col-span-12">
   <ul class="my-2 flex flex-col gap-2">
     <li *ngFor="let recipe of recipes" class="gap-4">
-      <app-recipe-item [recipe]="recipe"></app-recipe-item>
+      <app-recipe-item
+        [recipe]="recipe"
+        (click)="onSelected(recipe)"
+      ></app-recipe-item>
     </li>
   </ul>
 </div>
