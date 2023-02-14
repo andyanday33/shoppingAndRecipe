@@ -7,4 +7,9 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeDetailComponent {
   @Input() recipe!: Recipe;
+  public isDropdownHidden: boolean = true;
+
+  onDropdownClick() {
+    this.isDropdownHidden = !this.isDropdownHidden;
+  }
 }
